@@ -1,8 +1,14 @@
+import Background from "../components/Background";
+
 export default function AboutPage() {
   return (
-    <>
-      <h1 className="text-center mt-5">About Me</h1>
+    <Background>
       <div className="container mt-5">
+        <div className="row">
+          <div className="col-lg-12 text-center">
+            <h1 className="mt-5">About Me</h1>
+          </div>
+        </div>
         <div className="row">
           <div className="col-lg-8 offset-lg-2">
             <p className="lead">
@@ -22,6 +28,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </>
+    </Background>
   );
 }

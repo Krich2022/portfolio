@@ -1,26 +1,40 @@
 import Project from "../components/Project";
 import bakston from "../assets/bakston.png";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import Background from "../components/Background";
 
 export default function PortfolioPage() {
-  const project = {
-    id: 1,
-    img: bakston,
-    alt: "asdf",
-    imageClass: "adsf",
-  };
+  const projects = [
+    {
+      img: bakston,
+      text: "",
+      title: "Bakston Freight",
+      link: "https://www.Bakston.com",
+    },
+    {
+      img: "",
+      text: "",
+      title: "The Plug",
+      link: "https://sleepy-bayou-35337-4939ad58a73e.herokuapp.com/",
+    },
+    // Add more projects as needed
+  ];
+
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <Background>
+      <div className="container mt-5">
+        <div className="row">
+          <div className="col-lg-12 text-center">
+            <h1 className="mt-5">Projects</h1>
+          </div>
+        </div>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
+          {projects.map((project, index) => (
+            <div key={index} className="col-auto px-2 py-2">
+              <Project {...project} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </Background>
   );
 }

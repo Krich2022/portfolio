@@ -18,13 +18,16 @@ export default function Background({ children }) {
     height: "100%",
     backgroundColor: "rgba(0, 0, 0, 0.5)",
   };
+  const priority = {
+    zIndex: 999,
+  };
   return (
     <section
       style={sectionStyle}
       className="d-flex justify-content-center align-items-center text-center vh-100 text-light"
     >
       <div style={overlayStyle}></div>
-      {children}
+      <div style={priority}>{children}</div>
     </section>
   );
 }
