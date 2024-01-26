@@ -1,6 +1,5 @@
 import Project from "../components/Project";
 import bakston from "../assets/bakston.png";
-import Background from "../components/Background";
 
 export default function PortfolioPage() {
   const projects = [
@@ -20,21 +19,19 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <Background>
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-lg-12 text-center">
-            <h1 className="mt-5">Projects</h1>
-          </div>
-        </div>
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-          {projects.map((project, index) => (
-            <div key={index} className="col-auto px-2 py-2">
-              <Project {...project} />
-            </div>
-          ))}
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col-lg-12 text-center">
+          <h1 className="mt-5">Projects</h1>
         </div>
       </div>
-    </Background>
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        {projects.map((project, index) => (
+          <div key={index} className="col-auto px-2 py-2">
+            <Project {...project} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
