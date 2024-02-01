@@ -11,7 +11,6 @@ export default function ContactForm() {
   const [isValidEmail, setIsValidEmail] = useState(true);
 
   useEffect(() => {
-    // Email validation logic (you can use a library like validator)
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     setIsValidEmail(isValid);
   }, [email]);
@@ -24,16 +23,20 @@ export default function ContactForm() {
     setIsValidMessage(message.trim() !== "");
   }, [message]);
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const handleNameChange = (e) => {
-    setName(e.target.value);
+  const handleChange = (e) => {
+    switch (e.target.name) {
+      case "name":
+        setName(e.target.value);
+        break;
+      case "email":
+        setEmail(e.target.value);
+        break;
+      case "message":
+        setMessage(e.target.value);
+        break;
+      default:
+        console.error(`Something went wrong`);
+    }
   };
 
   return (
@@ -42,12 +45,11 @@ export default function ContactForm() {
         controlId="floatingInput"
         label="Full Name"
         className={`mb-3 ${isValidName ? "" : "has-danger"}`}
-        style={{ color: "black" }}
-      >
+        style={{ color: "black" }}>
         <Form.Control
           type="text"
-          placeholder="Name"
-          onBlur={handleNameChange}
+          name="name"
+          onBlur={handleChange}
           isInvalid={!isValidName}
         />
       </FloatingLabel>
@@ -55,12 +57,11 @@ export default function ContactForm() {
         controlId="floatingInput"
         label="Email address"
         className={`mb-3 ${isValidEmail ? "" : "has-danger"}`}
-        style={{ color: "black" }}
-      >
+        style={{ color: "black" }}>
         <Form.Control
           type="email"
-          placeholder="name@example.com"
-          onBlur={handleEmailChange}
+          name="email"
+          onBlur={handleChange}
           isInvalid={!isValidEmail}
         />
         <Form.Control.Feedback type="invalid">
@@ -71,15 +72,13 @@ export default function ContactForm() {
         controlId="floatingTextArea"
         label="Message"
         className={`mb-3 ${isValidMessage ? "" : "has-danger"}`}
-        style={{ color: "black" }}
-      >
+        style={{ color: "black" }}>
         <Form.Control
           as="textarea"
-          placeholder="Leave a message!"
-          onBlur={handleMessageChange}
+          name="message"
+          onBlur={handleChange}
           isInvalid={!isValidMessage}
-          style={{ height: "300px" }}
-        ></Form.Control>
+          style={{ height: "300px" }}></Form.Control>
       </FloatingLabel>
       <Button>Submit</Button>
     </>
