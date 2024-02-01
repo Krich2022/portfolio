@@ -1,18 +1,25 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
-const Project = ({ title, img, text, link }) => {
+import { Col } from "react-bootstrap";
+const Project = ({ title, img, text, link, repo }) => {
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={img} />
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{text}</Card.Text>
-        <Button variant="primary" href={link}>
-          Go to {title}
-        </Button>
-      </Card.Body>
-    </Card>
+    <Col>
+      <Card style={{ width: "18rem", minHeight: "320px" }}>
+        <Card.Img variant="top" src={img} />
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{text}</Card.Text>
+          <Button variant="primary" href={link}>
+            Go to {title}
+          </Button>
+          {repo && (
+            <Button variant="primary" href={repo}>
+              Repository
+            </Button>
+          )}
+        </Card.Body>
+      </Card>
+    </Col>
   );
 };
 export default Project;
