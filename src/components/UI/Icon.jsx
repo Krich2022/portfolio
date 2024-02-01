@@ -7,9 +7,8 @@ export default function Icon({ images }) {
   return (
     <Container
       fluid
-      className="fixed-bottom text-center mx-auto"
-      style={{ maxWidth: "400px" }}
-    >
+      className=" text-center mx-auto"
+      style={{ maxWidth: "400px" }}>
       <Row className="justify-content-center">
         {images.map(({ image, link }, index) => (
           <Col key={index} className="max-100 cursor-pointer">
