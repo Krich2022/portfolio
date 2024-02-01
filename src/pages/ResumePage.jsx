@@ -1,3 +1,8 @@
+import ResumeAccordion from "../components/ResumeAccordion";
+
 export default function ResumePage() {
-  return;
+  <>
+    <h1>Resume</h1>
+    <ResumeAccordion />
+  </>;
 }

@@ -1,5 +1,5 @@
 import Navbar from "./UI/Navbar";
 
-export default function Nav() {
+export default function Header() {
   return <Navbar />;
 }
