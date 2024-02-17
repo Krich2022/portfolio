@@ -1,10 +1,10 @@
 import Project from "../components/Project";
-import bakston from "../assets/bakston.jpg";
-import Plug from "../assets/theplug.jpg";
-import crunchtime from "../assets/crunchtime.jpg";
-import macromanager from "../assets/macromanager.jpg";
-import mongomesh from "../assets/mongomesh.jpg";
-import quiver from "../assets/quiver.png";
+import bakston from "assets/bakston.jpg";
+import Plug from "assets/theplug.jpg";
+import crunchtime from "assets/crunchtime.jpg";
+import macromanager from "assets/macromanager.jpg";
+import mongomesh from "assets/mongomesh.jpg";
+import quiver from "assets/quiver.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
