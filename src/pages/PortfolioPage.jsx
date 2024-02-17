@@ -1,50 +1,56 @@
 import Project from "../components/Project";
-import bakston from "../assets/bakston.png";
+import bakston from "../assets/bakston.jpg";
+import Plug from "../assets/theplug.jpg";
+import crunchtime from "../assets/crunchtime.jpg";
+import macromanager from "../assets/macromanager.jpg";
+import mongomesh from "../assets/mongomesh.jpg";
+import quiver from "../assets/quiver.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Plug from "../assets/Screenshot 2023-12-22 at 6.12.09 PM.png";
 
 export default function PortfolioPage() {
   const projects = [
     {
       img: bakston,
-      text: "",
+      text: "Full-Stack",
       title: "Bakston Freight",
       link: "https://www.Bakston.com",
     },
     {
       img: Plug,
-      text: "",
+      text: "Full-Stack",
       title: "The Plug",
       link: "https://sleepy-bayou-35337-4939ad58a73e.herokuapp.com/",
+      repo: "https://github.com/Krich2022/The_Plug",
     },
     {
-      img: "",
-      text: "",
+      img: quiver,
+      text: "Full-Stack",
+      title: "Character Quiver",
+      link: "https://character-quiver.onrender.com/",
+      repo: "https://github.com/Krich2022/character-quiver",
+    },
+    {
+      img: crunchtime,
+      text: "Front-End",
       title: "Crunch Time",
+      link: "https://krich2022.github.io/crunch-time/",
+      repo: "https://github.com/Krich2022/crunch-time",
+    },
+
+    {
+      img: macromanager,
+      text: "Back-End",
+      title: "Macro-Manager",
       link: "",
-      repo: "",
+      repo: "https://github.com/Krich2022/macro-manager",
     },
     {
-      img: "",
-      text: "",
-      title: "",
+      img: mongomesh,
+      text: "Back-End",
+      title: "MongoMesh",
       link: "",
-      repo: "",
-    },
-    {
-      img: "",
-      text: "",
-      title: "",
-      link: "",
-      repo: "",
-    },
-    {
-      img: "",
-      text: "",
-      title: "",
-      link: "",
-      repo: "",
+      repo: "https://github.com/Krich2022/mongomesh",
     },
   ];
 
