@@ -3,10 +3,11 @@ import Card from "react-bootstrap/Card";
 import { Col } from "react-bootstrap";
 const Project = ({ title, img, text, link, repo }) => {
   const backgroundImg = {
-    background: `url(${img})`,
-    width: "100%",
+    background: `url(/public${img})`,
+    minWidth: "100%",
     height: "200px",
     backgroundSize: "cover",
+    backgroundPosition: "center",
   };
   return (
     <Col>

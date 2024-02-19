@@ -1,37 +1,37 @@
 import Project from "../components/Project";
-import bakston from "../assets/bakston.jpg";
-import Plug from "../assets/theplug.jpg";
-import crunchtime from "../assets/crunchtime.jpg";
-import macromanager from "../assets/macromanager.jpg";
-import mongomesh from "../assets/mongomesh.jpg";
-import quiver from "../assets/quiver.png";
+// import bakston from "/bakston.jpg";
+// import Plug from "/theplug.jpg";
+// import crunchtime from "/crunchtime.jpg";
+// import macromanager from "/macromanager.jpg";
+// import mongomesh from "/mongomesh.jpg";
+// import quiver from "/quiver.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
 export default function PortfolioPage() {
   const projects = [
     {
-      img: bakston,
+      img: "/bakston.jpg",
       text: "Full-Stack",
       title: "Bakston Freight",
       link: "https://www.Bakston.com",
     },
     {
-      img: Plug,
+      img: "/theplug.jpg",
       text: "Full-Stack",
       title: "The Plug",
       link: "https://sleepy-bayou-35337-4939ad58a73e.herokuapp.com/",
       repo: "https://github.com/Krich2022/The_Plug",
     },
     {
-      img: quiver,
+      img: "/quiver.png",
       text: "Full-Stack",
       title: "Character Quiver",
       link: "https://character-quiver.onrender.com/",
       repo: "https://github.com/Krich2022/character-quiver",
     },
     {
-      img: crunchtime,
+      img: "/crunchtime.jpg",
       text: "Front-End",
       title: "Crunch Time",
       link: "https://krich2022.github.io/crunch-time/",
@@ -39,14 +39,14 @@ export default function PortfolioPage() {
     },
 
     {
-      img: macromanager,
+      img: "/macromanager.jpg",
       text: "Back-End",
       title: "Macro-Manager",
       link: "",
       repo: "https://github.com/Krich2022/macro-manager",
     },
     {
-      img: mongomesh,
+      img: "/mongomesh.jpg",
       text: "Back-End",
       title: "MongoMesh",
       link: "",
